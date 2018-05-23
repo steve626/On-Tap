@@ -7,9 +7,10 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'dad8710',
+        host: 'y5s2h87f6ur56vae.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        port: 3306,
+        user: 'ikn29d7nnqf1j2sq',
+        password: 'wg063hdtdjq7wjx7',
         database: 'onTap_db',
     });
 };
