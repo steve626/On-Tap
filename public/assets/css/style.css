@@ -1,0 +1,112 @@
+.display-4 {
+	font-family: pacifico;
+	text-align: center;
+	margin-bottom: 55px;
+	margin-top: -10px;
+	font-size: 100px;
+}
+
+.btn-circle {
+	background-color: #F84221;
+	border: none;
+}
+
+.jumbotron {
+    background-color: #FDD65B;
+    padding-bottom: 10px;
+}
+
+body {
+	background-color: #FDD65B;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+	color: #F84221;
+}
+
+.row {
+	margin-left: 180px;
+	margin-right: 180px;
+}
+
+.card {
+	border: none;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+#read-more:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 120px;
+
+}
+
+.tableContainer {
+        margin-bottom: 100px;
+}
+
+
+th {
+    font-style: bold;
+    font-size: 1.25rem;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:nth-child(odd){background-color: whitesmoke;}
+
+tr:hover {background-color: #ddd;}
+
+
+#cityTable {
+    width: 100px;
+}
+
+#beerList, #cityList {
+    width: 160px;
+    color: white;
+    background-color: darkslategrey;
+}
+
+.beer_list_body {
+    background-image: url("assets/images/beerWall.jpg");
+}
+
+.dropdown {
+	float: right;
+	margin-right: 400px;
+}
+
+.image {
+	width: 100%;
+}
+
+.card:hover {
+    -webkit-animation: jello 1s;
+    animation: jello 1s;
+}
+
+.text-muted {
+	text-align: center;
+}
+
+.display-4 {
+    animation: rubberBand 1.5s;
+}
+
+#map {
+    height: 400px;
+    width: 50%;
+ }
