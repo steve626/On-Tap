@@ -24,4 +24,4 @@ Users can also add a beer to any establshment by choosing our add a beer option.
 
 ![Add Beer](.../public/assets/images/addBeerSnip.PNG)
 
-<img src-"./../public/assets/images/addBeerSnip.PNG">
+<img src="./../public/assets/images/addBeerSnip.PNG">
