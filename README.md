@@ -22,6 +22,6 @@ Users have two main ways to interact with our beer app. They have a choice of se
 
 Users can also add a beer to any establshment by choosing our add a beer option. 
 
-![Add Beer](.../pulic/assets/images/addBeerSnip.PNG)
+![Add Beer](.../public/assets/images/addBeerSnip.PNG)
 
 
