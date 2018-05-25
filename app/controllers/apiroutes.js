@@ -22,13 +22,7 @@ router.get("/api/beers/:chosenBeer", function (req, res){
     order: ["brewery_name"]
   })
   .then(function (data) {
-    // beers = []
-    // for (var i = 0; i < data.length; i++) {
-    //   if (beers.indexOf(data[i].beer_name) === -1)
-    //     beers.push(data[i].beer_name, data[i].brewery_name);
-    //     console.log(data[i].beer_name);
-    // }
-
+    
     res.json(data);
   })
 });
