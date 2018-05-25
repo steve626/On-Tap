@@ -22,6 +22,6 @@ Users have two main ways to interact with our beer app. They have a choice of se
 
 Users can also add a beer to any establshment by choosing our add a beer option. 
 
-![Add Beer](.../public/assets/images/addBeerSnip.PNG)
+![Add Beer](C:\Users\Zane\Desktop\00-Coding School\Project-2-On-Tap\Steve-Project-2-Repo\On-Tap\public\assets\images\addBeerSnip.PNG)
 
-<img src="./../public/assets/images/addBeerSnip.PNG">
+<img src="./public/assets/images/addBeerSnip.PNG">
