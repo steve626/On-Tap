@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>On Tap!</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/maps.js">
+           
+        
+    <title>Brewery List</title>
+  </head>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="/beerList">Beer</a>
+        </div>
+      </div>
+    </nav>
+
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Breweries</h1>
+        <p class="text-center lead">Discover a new tap in the East Valley. Welcome to your home away from home.</p>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="col-lg-8">      
+            <div class="dropdown">
+                <div class="form-group">
+                    <label for="cityList"><stong>Choose a City:</stong></label>
+                    <select class="form-control" id="cityList"> 
+                      <option  value="Chandler">Chandler</option>
+                      <option  value="Gilbert">Gilbert</option>
+                      <option  value="Phoenix">Phoenix</option>
+                      <option  value="Tempe">Tempe</option>
+                    </select>
+                </div> 
+            </div>
+          </div>
+      </div>
+      <div class="container">
+        <div col-lg-12>          
+          <div col-md-6>
+        <div class="container tableContainer">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Breweries/Bars:</th>
+              </tr>
+            </thead>
+              <tbody id="cityTable"></tbody>
+          </table>
+        </div>
+      </div>
+    
+  
+  
+        <div col-md-6>
+            <div id='map'></div>
+          </div>
+        </div>
+      </div>
+    
+
+
+                
+            <nav class="navbar fixed-bottom navbar-light bg-light">          
+              <div class="container">
+                  <!-- Button trigger  -->
+                    <button type="button" class="btn btn-secondary" data-toggle="collapse" href="#addABeer" aria-haspopup="true" aria-expanded="false">
+                        Add a beer!
+                      </button>
+                      <div class="collapse" id="addABeer">
+                        <div class="card card-body">
+                          <div class="form-group">
+                             <h5 class="modal-title" id="exampleLabel">Add a Beer!</h5>
+                          </div>          
+                             <div class="card card-body">             
+                                <form>
+                                    <div class="form-group">
+                                      <label for="inputBeerName">Name</label>
+                                      <input type="text" class="form-control" id="inputBeer" aria-describedby="BeerName" placeholder="Enter beer name">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputBreweryName">Brewery</label>
+                                      <input type="" class="form-control" id="inputBrewery" placeholder="Enter Brewery Name">
+                                    </div> 
+                                    <div class="form-group">
+                                       <label for="inputBreweryLocation">Location</label>
+                                       <input type="" class="form-control" id="inputLocation" placeholder="Enter Brewery Location">
+                                     </div> 
+                                    <div class="form-group">
+                                       <label for="beerTypeList">Style</label>
+                                       <select class="form-control" id="beerTypeList">                    
+                                            <option value="Lager">Lager</option>
+                                            <option value="Ale">Ale</option>
+                                            <option value="Blonde Ale">Blonde Ale</option>
+                                            <option value="Pale Ale">Pale Ale</option>
+                                            <option value="Red Ale">Red Ale</option>
+                                            <option value="Scotch Ale">Scotch Ale</option>
+                                            <option value="IPA">IPA</option>
+                                            <option value="Strong Beer">Strong Beer</option>
+                                            <option value="Saison">Saison</option>
+                                            <option value="Wheat Beer">Wheat Beer</option>
+                                            <option value="Fruit Beer">Fruity Beer</option>
+                                            <option value="Porter">Porter</option>
+                                            <option value="Stout">Stout</option>
+                                            <option value="Gose">Gose</option>
+                                         </select>
+                                     </div>                    
+                                 </form>  
+                            
+                             <div class="card-footer">
+                               <button type="button" class="btn btn-secondary" data-toggle="collapse" href="#addABeer">Close</button>
+                               <button type="button" class="btn btn-primary" data-toggle="collpase" href="#addABeer" id="submitBeer">Submit</button>             
+                             </div>
+                           </div>
+                          </div>
+                          </div> 
+                        </div> 
+                </div>
+            </nav>    
+          </body>
+    <script type="text/javascript" src="assets/js/getBrews.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIt4DdhP9s2fNCn9haXpM2SqZDMpfpulc&callback=initMap">
+    </script>
+</html>
