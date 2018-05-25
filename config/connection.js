@@ -11,7 +11,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         user: 'ikn29d7nnqf1j2sq',
         password: 'wg063hdtdjq7wjx7',
-        database: 'onTap_db',
+        database: 'hn9sfgv5p19t7cgb',
     });
 };
 
