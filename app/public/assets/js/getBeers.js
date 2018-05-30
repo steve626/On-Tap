@@ -9,7 +9,8 @@ $('#beerList').on('change', function(event){
    
   
     $.get("/api/beers/" + beerVal, function(data) {
-        console.log('beer data ' + data);
+        console.log('beer data: ' + data);
+        console.log('beer type: ' + beerVal);
           
             $('#beerTable').empty();
             if (!data) {
