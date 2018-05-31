@@ -1,5 +1,5 @@
 USE hn9sfgv5p19t7cgb;
-INSERT INTO beerLists(brewery_name, city_name, beer_name, beer_type, createdAt, updatedAt)
+INSERT INTO beerlists(brewery_name, city_name, beer_name, beer_type, createdAt, updatedAt)
 VALUES
 ('XII West Brewing Co', 'Gilbert','The Weight', 'Scotch Ale', NOW(), NOW()),
 ('XII West Brewing Co', 'Gilbert','Midnight Run', 'Stout', NOW(), NOW()),
